@@ -185,7 +185,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         position top
-        status_command i3status
+        # status_command i3status
+        status_command i3blocks
         colors {
           background #282A36
           statusline #F8F8F2
@@ -197,4 +198,5 @@ bar {
           binding_mode       #FF5555 #FF5555 #F8F8F2
         }
 }
-exec --no-startup-id xfce4-panel --disable-wm-check
+# exec --no-startup-id xfce4-panel --disable-wm-check
+exec --no-startup-id xfce4-power-manager
