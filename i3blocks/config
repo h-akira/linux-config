@@ -50,13 +50,13 @@ signal=10
 [memory]
 label=MEM
 separator=false
-interval=30
+interval=17
 
 [memory]
 label=SWAP
 instance=swap
 separator=false
-interval=30
+interval=17
 
 # Disk usage
 #
@@ -66,7 +66,7 @@ interval=30
 [disk]
 label=HOME
 #DIR=/mnt/data
-interval=30
+interval=20
 
 # Network interface monitoring
 #
