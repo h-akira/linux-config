@@ -199,14 +199,14 @@ mode "$mode_display" {
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+x mode "$mode_display"
 
-# 背景の設定
+# 背景
 exec --no-startup-id "~/.fehbg"
 # sudo apt install fehが必要
-# 変更する場合は`feh -Zr ~/.config/i3/desktop/`で設定
+# 初回と変更する場合は`feh -Zr ~/.config/i3/desktop/`で設定
+bindsym $mod+b exec --no-startup-id "feh -Zr ~/.config/i3/desktop/"
 
 # スクリーンショット
-# bindsym $mod+p exec --no-startup-id "xfce4-screenshooter -fullscreen --save ~/Pictures"
-# bindsym $mod+p exec --no-startup-id "xfce4-screenshooter"
+bindsym $mod+p exec xfce4-screenshooter
 
 # chrome
 bindsym $mod+c exec google-chrome
