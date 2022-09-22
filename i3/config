@@ -229,4 +229,4 @@ bar {
         }
 }
 # exec --no-startup-id xfce4-panel --disable-wm-check
-exec --no-startup-id xfce4-power-manager
+# exec --no-startup-id xfce4-power-manager
