@@ -50,13 +50,13 @@ signal=10
 [memory]
 label=MEM
 separator=false
-interval=6
+interval=4
 
 [memory]
 label=SWAP
 instance=swap
 separator=false
-interval=17
+interval=4
 
 # Disk usage
 #
@@ -75,13 +75,13 @@ interval=20
 [iface]
 #IFACE=wlan0
 color=#00FF00
-interval=10
+interval=7
 separator=false
 
 [wifi]
 #INTERFACE=wlp3s0
 label=wifi:
-interval=10
+interval=7
 separator=false
 
 # [bandwidth]
@@ -94,7 +94,7 @@ separator=false
 # see the script for details.
 [cpu_usage]
 label=CPU
-interval=6
+interval=4
 min_width=CPU 100.00%
 #separator=false
 
