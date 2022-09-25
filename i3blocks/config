@@ -50,13 +50,13 @@ signal=10
 [memory]
 label=MEM
 separator=false
-interval=4
+interval=3
 
 [memory]
 label=SWAP
 instance=swap
 separator=false
-interval=4
+interval=3
 
 # Disk usage
 #
@@ -94,9 +94,9 @@ separator=false
 # see the script for details.
 [cpu_usage]
 label=CPU
-interval=4
+interval=3
 min_width=CPU 100.00%
-#separator=false
+# separator=false
 
 # [load_average]
 # label=LOAD
