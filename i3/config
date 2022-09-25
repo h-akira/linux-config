@@ -212,7 +212,10 @@ bindsym $mod+p exec xfce4-screenshooter
 bindsym $mod+c exec google-chrome
 
 # 設定
-bindsym $mod+m exec xfce4-settings-manager
+bindsym $mod+Shift+s exec xfce4-settings-manager
+
+# アプリマネージャー
+bindsym $mod+Shift+a exec xfce4-appfinder
 
 # Paraview
 # bindsym $mod+Shift+p exec paraview
