@@ -226,20 +226,20 @@ exec --no-startup-id "~/.fehbg"
 bindsym $mod+b exec --no-startup-id "feh -Zr ~/.config/i3/desktop/"
 
 # スクリーンショット
-bindsym $mod+p exec xfce4-screenshooter
+bindsym Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full') -f"
+bindsym Ctrl+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full') --fullscreen --mouse"
+bindsym Shift+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_region') --region"
+bindsym Ctrl+Shift+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_region') --region --mouse"
+bindsym $mod+Shift+p exec --no-startup-id xfce4-screenshooter
 
 # chrome
-bindsym $mod+c exec google-chrome
+bindsym $mod+c exec --no-startup-id google-chrome
 
-# 設定
-bindsym $mod+Shift+s exec xfce4-settings-manager
-
-# アプリマネージャー
-bindsym $mod+Shift+a exec xfce4-appfinder
-
-# Paraview
-# bindsym $mod+Shift+p exec paraview
-# bindsym $mod+Shift+p exec --no-startup-id "paraview"
+# その他アプリ起動
+bindsym $mod+Ctrl+s exec --no-startup-id xfce4-settings-manager
+bindsym $mod+Ctrl+a exec --no-startup-id xfce4-appfinder
+bindsym $mod+Ctrl+p exec --no-startup-id "paraview"
+bindsym $mod+Ctrl+m exec --no-startup-id "mattermost-desktop"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
