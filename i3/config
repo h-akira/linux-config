@@ -229,7 +229,7 @@ bindsym Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-scre
 bindsym Ctrl+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full') --fullscreen --mouse"
 bindsym Shift+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_region') --region"
 bindsym Ctrl+Shift+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_region') --region --mouse"
-bindsym $mod+p exec --no-startup-id xfce4-screenshooter
+bindsym $mod+s exec --no-startup-id xfce4-screenshooter
 
 # chrome
 bindsym $mod+c exec --no-startup-id google-chrome
@@ -237,7 +237,7 @@ bindsym $mod+c exec --no-startup-id google-chrome
 # その他アプリ起動
 bindsym $mod+Ctrl+x exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Ctrl+a exec --no-startup-id xfce4-appfinder
-bindsym $mod+Ctrl+v exec --no-startup-id code
+bindsym $mod+Ctrl+c exec --no-startup-id code
 bindsym $mod+Ctrl+s exec --no-startup-id slack
 bindsym $mod+Ctrl+t exec --no-startup-id thunar
 bindsym $mod+Ctrl+p exec --no-startup-id "paraview"
