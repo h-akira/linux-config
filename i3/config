@@ -9,6 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# altとsuperを入れ替えることを前提としてMod4とする．
 set $mod Mod4
 
 
