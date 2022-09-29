@@ -219,8 +219,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-## Manual management of external displays
-# Set the shortcuts and what they do
+## ディスプレイの設定
+## 2つのHDMIが接続されている場合の初期配置
+exec --no-startup-id "sh ~/.config/i3/script/displays.sh"
+# ショートカット
 set $mode_display (m) Main ON, (s) Sub ON, (M) Main OFF, (S) Sub OFF
 mode "$mode_display" {
   bindsym m exec --no-startup-id xrandr --output HDMI-1 --auto --right-of HDMI-2, mode "default"
@@ -279,8 +281,6 @@ bar {
           binding_mode       #FF5555 #FF5555 #F8F8F2
         }
 }
-# exec --no-startup-id xfce4-panel --disable-wm-check
-# exec --no-startup-id xfce4-power-manager
 
-# 起動時に実行したいものを追加
+# その他，起動時に実行したいもの
 exec --no-startup-id "sh ~/.config/i3/script/mount.sh"
