@@ -281,3 +281,6 @@ bar {
 }
 # exec --no-startup-id xfce4-panel --disable-wm-check
 # exec --no-startup-id xfce4-power-manager
+
+# 起動時に実行したいものを追加
+exec --no-startup-id "sh ~/.config/i3/script/mount.sh"
