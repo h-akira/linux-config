@@ -171,10 +171,25 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 # 以下の行をコメントアウトし，その次の行を加えた．
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec --no-startup-id \
-        "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot' -b 'Logout' 'i3-msg exit' -b 'Suspend' 'systemctl suspend'"
+# bindsym $mod+Shift+e exec --no-startup-id \
+        # "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot' -b 'Logout' 'i3-msg exit' -b 'Suspend' 'systemctl suspend'"
 # https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/overview-of-the-power-management-commands-with-systemctl_shutting-down-suspending-and-hibernating-the-system
 
+# オリジナル
+set $mode_shutdown (p) Power OFF, (r) Reboot, (e) Logout, (s) Suspend, (l) Lock
+mode "$mode_shutdown" {
+  bindsym p exec --no-startup-id "systemctl poweroff"
+  bindsym r exec --no-startup-id "systemctl reboot"
+  bindsym e exec --no-startup-id "i3-msg exit"
+  bindsym s exec --no-startup-id "systemctl suspend", mode "default"
+  bindsym l exec --no-startup-id "i3lock --color='#000000'", mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+Shift+e mode "default"
+}
+# Declare here the shortcut to bring the display selection menu
+bindsym $mod+Shift+e mode "$mode_shutdown"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
