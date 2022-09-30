@@ -261,7 +261,8 @@ bindsym $mod+Ctrl+v exec --no-startup-id pavucontrol
 bindsym $mod+Ctrl+c exec --no-startup-id code
 bindsym $mod+Ctrl+s exec --no-startup-id slack
 bindsym $mod+Ctrl+t exec --no-startup-id thunar
-bindsym $mod+Ctrl+p exec --no-startup-id "paraview"
+# bindsym $mod+Ctrl+p exec --no-startup-id "paraview"
+bindsym $mod+Ctrl+p exec --no-startup-id "~/.local/ParaView-5.11.0-RC1-MPI-Linux-Python3.9-x86_64/bin/paraview"
 bindsym $mod+Ctrl+m exec --no-startup-id mattermost-desktop
 bindsym $mod+Ctrl+f exec --no-startup-id "feh -Zr ~/.config/i3/desktop/"
 
