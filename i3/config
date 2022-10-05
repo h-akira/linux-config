@@ -245,9 +245,9 @@ exec --no-startup-id "~/.fehbg"
 # 初回と変更する場合は`feh -Zr ~/.config/i3/desktop/`で設定
 
 # スクリーンショット
-bindsym Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full') -f"
-bindsym Ctrl+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full') --fullscreen --mouse"
-bindsym Shift+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_region') --region"
+bindsym Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full.png') -f"
+bindsym Ctrl+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full.png') --fullscreen --mouse"
+bindsym Shift+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_region.png') --region"
 bindsym $mod+s exec --no-startup-id xfce4-screenshooter
 
 # chrome
