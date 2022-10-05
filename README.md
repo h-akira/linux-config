@@ -1,4 +1,11 @@
 # 設定ファイル
+```
+cd ~/.config
+git init
+git remote add origin git@github.com:h-akira/linux-config.git
+git pull origin main
+```
+
 ## i3
 タイル型ウィンドウマネージャーである．主な変更点:
 - 上下左右の移動はvimに合わせて`h`〜`l`
