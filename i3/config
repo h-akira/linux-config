@@ -224,12 +224,13 @@ bindsym $mod+r mode "resize"
 ## 2つのHDMIが接続されている場合の初期配置
 exec --no-startup-id "sh ~/.config/i3/script/displays.sh"
 # ショートカット
-set $mode_display (m) Main ON, (s) Sub ON, (M) Main OFF, (S) Sub OFF
+set $mode_display (m) Main ON, (s) Sub ON, (M) Main OFF, (S) Sub OFF, (r) re-exec
 mode "$mode_display" {
   bindsym m exec --no-startup-id xrandr --output HDMI-1 --auto --right-of HDMI-2, mode "default"
   bindsym s exec --no-startup-id xrandr --output HDMI-2 --auto --left-of HDMI-1, mode "default"
   bindsym Shift+m exec --no-startup-id xrandr --output HDMI-1 --auto --off, mode "default"
   bindsym Shift+s exec --no-startup-id xrandr --output HDMI-2 --auto --off, mode "default"
+  bindsym r exec --no-startup-id "sh ~/.config/i3/script/displays.sh", mode "default"
 
   # back to normal: Enter or Escape
   bindsym Return mode "default"
