@@ -4,6 +4,8 @@ cd ~/.config
 git init
 git remote add origin git@github.com:h-akira/linux-config.git
 git pull origin main
+# たぶん必要
+git submodule update --init --recursive
 ```
 
 ## i3
