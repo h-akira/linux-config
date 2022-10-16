@@ -285,6 +285,3 @@ bar {
 
 # その他，起動時に実行したいもの
 exec --no-startup-id "sh ~/.config/i3/script/mount.sh"
-bindsym $mod+t exec "sudo xkeysnail ~/.config/xkeysnail/config.py &"
-# bindsym $mod+t exec "sh ~/.config/i3/script/xkeysnail.sh"
-# bindsym $mod+Ctrl+l exec "sh ~/.config/xkeysnail/stop.sh"
