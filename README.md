@@ -40,15 +40,10 @@ https://www.simple-web-system.work/entry/2019/12/10/153217
 ## xfce4/terminal
 タブ移動がのショートカットがi3と被るため，`Ctrl+数字`と`Ctrl+Tab`で移動できるようにした．
 
-## xkeysnail
-Mac風のキーマップを実現するために使用．
-後述のXmodmapは上書きされるようなので同じ設定もしている．  
-[GitHub](https://github.com/mooz/xkeysnail)  
-[作者のQiita](https://qiita.com/mooz@github/items/c5f25f27847333dd0b37)
-
 ## `dot.*`
 ホームディレクトリ直下にリンクを貼る．
 ```
 ln -sf dot.hogehoge .hogehoge
 ```
 - `dot.Xmodmap`: キー配置の変更（US配列が前提）
+  - xkeysnailで上書きされてしまう模様
