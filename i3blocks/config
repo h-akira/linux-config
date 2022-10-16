@@ -66,7 +66,7 @@ interval=3
 [disk]
 label=HOME
 #DIR=/mnt/data
-interval=20
+interval=23
 
 # CPU usage
 #
@@ -85,7 +85,7 @@ min_width=CPU 100.00%
 # see the script for details.
 [temperature]
 label=TEMP
-interval=10
+interval=11
 
 # Network interface monitoring
 #
@@ -118,6 +118,10 @@ interval=7
 # label=BAT
 # label=⚡
 # interval=30
+
+[xkeysnail]
+command=~/.config/i3blocks/xkeysnail-check.sh
+interval=7
 
 # Date Time
 #
