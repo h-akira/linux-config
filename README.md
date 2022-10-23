@@ -17,6 +17,7 @@ sudo apt install feh
 - 分割方向の変更は`-`と`\`
 - ワークスペース感のコンテナの移動時のフォーカス
 - `$mod`は`Xmodmap`で`Super`と`Alt`を入れ替えることを前提として`Mod4`に設定
+  - Macにyabaiを導入したため，ショートカットキー統一のため廃止（2022年10月24日）
 - アプリ起動のショートカットを主に`$mod`+`Ctrl`+`$key`に設定（chromeは`$mod`+`c`）
 - その他
   - スクリーンショット: xfce4-screenshooter
@@ -46,4 +47,4 @@ https://www.simple-web-system.work/entry/2019/12/10/153217
 ln -sf dot.hogehoge .hogehoge
 ```
 - `dot.Xmodmap`: キー配置の変更（US配列が前提）
-  - xkeysnailで上書きされてしまう模様
+  - [xkeysnail](https://github.com/h-akira/xkeysnail)に完全移行（2022年10月24日）
