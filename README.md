@@ -16,8 +16,8 @@ sudo apt install feh
 - 上下左右の移動はvimに合わせて`h`〜`l`
 - 分割方向の変更は`-`と`\`
 - ワークスペース感のコンテナの移動時のフォーカス
-- `$mod`は`Xmodmap`で`Super`と`Alt`を入れ替えることを前提として`Mod4`に設定
-  - Macにyabaiを導入したため，ショートカットキー統一のため廃止（2022年10月24日）
+- `$mod`は~~`Xmodmap`で`Super`と`Alt`を入れ替えることを前提として~~`Mod4`に設定
+  - Macへの[yabaiとskhd](https://github.com/h-akira/mac-config)導入およびlinuxへの[xkeysnail](https://github.com/h-akira/xkeysnail)導入に伴い，ショートカットキー統一のため入れ替えを廃止（2022年10月24日）
 - アプリ起動のショートカットを主に`$mod`+`Ctrl`+`$key`に設定（chromeは`$mod`+`c`）
 - その他
   - スクリーンショット: xfce4-screenshooter
@@ -40,6 +40,7 @@ https://www.simple-web-system.work/entry/2019/12/10/153217
 
 ## xfce4/terminal
 タブ移動がのショートカットがi3と被るため，`Ctrl+数字`と`Ctrl+Tab`で移動できるようにした．
+- altキーが空いたことでで不要になったが，`iterm`や`Chrome`に合わせるため存続（2022年10月24日）
 
 ## `dot.*`
 ホームディレクトリ直下にリンクを貼る．
@@ -47,4 +48,4 @@ https://www.simple-web-system.work/entry/2019/12/10/153217
 ln -sf dot.hogehoge .hogehoge
 ```
 - `dot.Xmodmap`: キー配置の変更（US配列が前提）
-  - [xkeysnail](https://github.com/h-akira/xkeysnail)に完全移行（2022年10月24日）
+  - [xkeysnail](https://github.com/h-akira/xkeysnail)に完全移行のため廃止（2022年10月24日）
