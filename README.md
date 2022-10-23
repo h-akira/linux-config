@@ -16,7 +16,7 @@ sudo apt install feh
 - 上下左右の移動はvimに合わせて`h`〜`l`
 - 分割方向の変更は`-`と`\`
 - ワークスペース感のコンテナの移動時のフォーカス
-- `$mod`は~~`Xmodmap`で`Super`と`Alt`を入れ替えることを前提として~~`Mod4`に設定
+- `$mod`は~~XmodmapでSuperとAltを入れ替えることを前提として~~`Mod4`に設定
   - Macへの[yabaiとskhd](https://github.com/h-akira/mac-config)導入およびlinuxへの[xkeysnail](https://github.com/h-akira/xkeysnail)導入に伴い，ショートカットキー統一のため入れ替えを廃止（2022年10月24日）
 - アプリ起動のショートカットを主に`$mod`+`Ctrl`+`$key`に設定（chromeは`$mod`+`c`）
 - その他
