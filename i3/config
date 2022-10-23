@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# altとsuperを入れ替えることを前提としてMod4とする．
+# altとsuperを入れ替えることを前提としてMod4とする．→Macライクにするため廃止
 set $mod Mod4
 
 
@@ -235,10 +235,10 @@ mode "$mode_display" {
   # back to normal: Enter or Escape
   bindsym Return mode "default"
   bindsym Escape mode "default"
-  bindsym $mod+x mode "default"
+  bindsym $mod+Shift+d mode "default"
 }
 # Declare here the shortcut to bring the display selection menu
-bindsym $mod+x mode "$mode_display"
+bindsym $mod+Shift+d mode "$mode_display"
 
 # 背景
 exec --no-startup-id "~/.fehbg"
@@ -252,7 +252,7 @@ bindsym Shift+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce
 bindsym $mod+s exec --no-startup-id xfce4-screenshooter
 
 # chrome
-bindsym $mod+b exec --no-startup-id google-chrome
+bindsym $mod+c exec --no-startup-id google-chrome
 
 # その他アプリ起動
 bindsym $mod+Ctrl+s exec --no-startup-id xfce4-settings-manager
@@ -260,10 +260,12 @@ bindsym $mod+Ctrl+a exec --no-startup-id xfce4-appfinder
 bindsym $mod+Ctrl+v exec --no-startup-id pavucontrol
 bindsym $mod+Ctrl+t exec --no-startup-id thunar
 bindsym $mod+Ctrl+c exec --no-startup-id code
-# bindsym $mod+Ctrl+s exec --no-startup-id slack
-bindsym $mod+Ctrl+p exec --no-startup-id "~/.local/opt/ParaView-5.11.0-RC1-MPI-Linux-Python3.9-x86_64/bin/paraview"
-bindsym $mod+Ctrl+m exec --no-startup-id mattermost-desktop
 bindsym $mod+Ctrl+f exec --no-startup-id "feh -Zr ~/.config/i3/desktop/"
+
+# その他，起動時に実行したいもの
+exec --no-startup-id "sh ~/.config/i3/script/displays.sh"
+exec --no-startup-id "sh ~/.config/i3/script/mount.sh"
+exec --no-startup-id "/home/hakira/.local/opt/xkeysnail/src/xkeysnail-start.sh"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -283,5 +285,3 @@ bar {
         }
 }
 
-# その他，起動時に実行したいもの
-exec --no-startup-id "sh ~/.config/i3/script/mount.sh"
