@@ -51,12 +51,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-# 以下の行をコメントアウト
 # bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# 以下の行のコメントアウトを解除
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
@@ -134,18 +132,6 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# move focused container to workspace (old)
-# bindsym $mod+Shift+1 move container to workspace number $ws1
-# bindsym $mod+Shift+2 move container to workspace number $ws2
-# bindsym $mod+Shift+3 move container to workspace number $ws3
-# bindsym $mod+Shift+4 move container to workspace number $ws4
-# bindsym $mod+Shift+5 move container to workspace number $ws5
-# bindsym $mod+Shift+6 move container to workspace number $ws6
-# bindsym $mod+Shift+7 move container to workspace number $ws7
-# bindsym $mod+Shift+8 move container to workspace number $ws8
-# bindsym $mod+Shift+9 move container to workspace number $ws9
-# bindsym $mod+Shift+0 move container to workspace number $ws10
-
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
 bindsym $mod+Ctrl+2 move container to workspace $ws2
@@ -171,13 +157,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-# 以下の行をコメントアウトし，その次の行を加えた．
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-# bindsym $mod+Shift+e exec --no-startup-id \
-        # "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot' -b 'Logout' 'i3-msg exit' -b 'Suspend' 'systemctl suspend'"
-# https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/overview-of-the-power-management-commands-with-systemctl_shutting-down-suspending-and-hibernating-the-system
-
-# オリジナル
 set $mode_shutdown (p) Power OFF, (r) Reboot, (e) Logout, (s) Suspend, (l) Lock
 mode "$mode_shutdown" {
   bindsym p exec --no-startup-id "systemctl poweroff"
@@ -196,7 +176,6 @@ bindsym $mod+Shift+e mode "$mode_shutdown"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
@@ -241,10 +220,7 @@ mode "$mode_display" {
 bindsym $mod+Shift+d mode "$mode_display"
 
 # 背景
-exec --no-startup-id "if [ -e ~/.fehbg ]; then ~/.fehbg; fi"
-# exec --no-startup-id "~/.fehbg"
-# sudo apt install fehが必要
-# 初回と変更する場合は`feh -Zr ~/.config/i3/desktop/`で設定
+exec --no-startup-id "if [ -e ~/.fehbg ]; then ~/.fehbg; else feh -Zr ~/.config/i3/desktop/; fi"
 
 # スクリーンショット
 bindsym Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full.png') -f"
