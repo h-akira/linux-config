@@ -241,7 +241,8 @@ mode "$mode_display" {
 bindsym $mod+Shift+d mode "$mode_display"
 
 # 背景
-exec --no-startup-id "~/.fehbg"
+exec --no-startup-id "if [ -e ~/.fehbg ]; then ~/.fehbg; fi"
+# exec --no-startup-id "~/.fehbg"
 # sudo apt install fehが必要
 # 初回と変更する場合は`feh -Zr ~/.config/i3/desktop/`で設定
 
@@ -264,14 +265,13 @@ bindsym $mod+Ctrl+f exec --no-startup-id "feh -Zr ~/.config/i3/desktop/"
 
 # その他，起動時に実行したいもの
 exec --no-startup-id "sh ~/.config/i3/script/displays.sh"
-exec --no-startup-id "sh ~/.config/i3/script/mount.sh"
-exec --no-startup-id "/home/hakira/.local/opt/xkeysnail/src/xkeysnail-start.sh"
+exec --no-startup-id "if [ -e ~/.config/i3/add.sh ]; then sh ~/.config/i3/add.sh; fi"
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         position top
-        # status_command i3status
         status_command i3blocks
         colors {
           background #282A36
