@@ -9,7 +9,6 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# altとsuperを入れ替えることを前提としてMod4とする．→Macライクにするため廃止
 set $mod Mod4
 
 
@@ -105,7 +104,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+z focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -203,13 +202,13 @@ bindsym $mod+r mode "resize"
 ## 2つのHDMIが接続されている場合の初期配置
 exec --no-startup-id "sh ~/.config/i3/script/displays.sh"
 # ショートカット
-set $mode_display (m) Main ON, (s) Sub ON, (M) Main OFF, (S) Sub OFF, (r) re-exec
+set $mode_display (m) Main ON, (s) Sub ON, (M) Main OFF, (S) Sub OFF, (d) Default
 mode "$mode_display" {
   bindsym m exec --no-startup-id xrandr --output HDMI-1 --auto --right-of HDMI-2, mode "default"
   bindsym s exec --no-startup-id xrandr --output HDMI-2 --auto --left-of HDMI-1, mode "default"
   bindsym Shift+m exec --no-startup-id xrandr --output HDMI-1 --auto --off, mode "default"
   bindsym Shift+s exec --no-startup-id xrandr --output HDMI-2 --auto --off, mode "default"
-  bindsym r exec --no-startup-id "sh ~/.config/i3/script/displays.sh", mode "default"
+  bindsym d exec --no-startup-id "sh ~/.config/i3/script/displays.sh", mode "default"
 
   # back to normal: Enter or Escape
   bindsym Return mode "default"
@@ -226,12 +225,12 @@ exec --no-startup-id "if [ -e ~/.fehbg ]; then ~/.fehbg; else feh -Zr ~/.config/
 bindsym Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full.png') -f"
 bindsym Ctrl+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_full.png') --fullscreen --mouse"
 bindsym Shift+Print exec --no-startup-id "xfce4-screenshooter -s ~/Pictures/xfce4-screenshooter/$(date +'%Y-%m-%d_%I-%M-%S_region.png') --region"
-bindsym $mod+s exec --no-startup-id xfce4-screenshooter
+bindsym $mod+Print exec --no-startup-id xfce4-screenshooter
 
 # chrome
 bindsym $mod+c exec --no-startup-id google-chrome
 
-# その他アプリ起動
+# アプリ起動ショートカット
 bindsym $mod+Ctrl+s exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Ctrl+a exec --no-startup-id xfce4-appfinder
 bindsym $mod+Ctrl+v exec --no-startup-id pavucontrol
@@ -240,7 +239,6 @@ bindsym $mod+Ctrl+c exec --no-startup-id code
 bindsym $mod+Ctrl+f exec --no-startup-id "feh -Zr ~/.config/i3/desktop/"
 
 # その他，起動時に実行したいもの
-exec --no-startup-id "sh ~/.config/i3/script/displays.sh"
 exec --no-startup-id "if [ -e ~/.config/i3/add.sh ]; then sh ~/.config/i3/add.sh; fi"
 
 
