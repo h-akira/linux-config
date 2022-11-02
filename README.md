@@ -19,6 +19,7 @@ git submodule update --init --recursive
 sudo apt install i3
 sudo apt install i3blocks
 sudo apt install feh
+pip3 install pandas-datareade
 ```
 その後再起動して選択．  
 メモ:
