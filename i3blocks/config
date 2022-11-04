@@ -85,7 +85,7 @@ min_width=CPU 100.00%
 # see the script for details.
 [temperature]
 label=TEMP
-interval=11
+interval=13
 
 # Network interface monitoring
 #
@@ -94,30 +94,18 @@ interval=11
 [iface]
 #IFACE=wlan0
 color=#00FF00
-interval=7
+interval=11
+separator=false
+
+# [ssid]
+# color=#00FF00
+# command=~/.config/i3blocks/ssid.sh
+# interval=17
 # separator=false
 
-# [wifi]
-#INTERFACE=wlp3s0
-# label=wifi:
-# interval=7
-# separator=false
-
-# [bandwidth]
-#INTERFACE=eth0
-# interval=5
-
-# [load_average]
-# label=LOAD
-# interval=10
-
-# Battery indicator
-#
-# The battery instance defaults to 0.
-# [battery]
-# label=BAT
-# label=⚡
-# interval=30
+[signal_bar]
+command=~/.config/i3blocks/signal_bar.sh
+interval=11
 
 [xkeysnail]
 command=~/.config/i3blocks/xkeysnail-check.sh
@@ -175,15 +163,15 @@ full_text=Quit
 #
 # bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 # bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-#[keyindicator]
-#KEY=CAPS
-#markup=pango
-#interval=once
-#signal=11
+# [keyindicator]
+# KEY=CAPS
+# markup=pango
+# interval=once
+# signal=11
 
-#[keyindicator]
-#KEY=NUM
-#markup=pango
-#interval=once
-#signal=11
+# [keyindicator]
+# KEY=NUM
+# markup=pango
+# interval=once
+# signal=11
 

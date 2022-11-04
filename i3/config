@@ -241,7 +241,6 @@ bindsym $mod+Ctrl+f exec --no-startup-id "feh -Zr ~/.config/i3/desktop/"
 # その他，起動時に実行したいもの
 exec --no-startup-id "if [ -e ~/.config/i3/add.sh ]; then sh ~/.config/i3/add.sh; fi"
 
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -258,4 +257,3 @@ bar {
           binding_mode       #FF5555 #FF5555 #F8F8F2
         }
 }
-
