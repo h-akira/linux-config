@@ -18,7 +18,11 @@ git submodule update --init --recursive
 ```
 sudo apt install i3
 sudo apt install i3blocks
+# 背景用に
 sudo apt install feh
+# CPUの温度を表示するために
+sudo apt install lm-sensors
+# ドル円の相場を表示するために
 pip3 install pandas-datareade
 ```
 その後再起動して選択．  
